@@ -37,9 +37,11 @@ public class DesingASplitWiseApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         RegisterUserDto registerUserDto=new RegisterUserDto();
-        registerUserDto.setName("Anika");
-        registerUserDto.setPassword("abcd");
-    //this.userController.registerUser(registerUserDto);
+        registerUserDto.setName("Mita");
+        registerUserDto.setPassword("pqrst");
+     this.userController.registerUser(registerUserDto);
+     String token=this.userController.login(6l,"pqrst");
+     System.out.println(token);
         AddGroupDto addGroupDto=new AddGroupDto();
         addGroupDto.setGroupName("GoaTrip");
         addGroupDto.setUserId(1L);

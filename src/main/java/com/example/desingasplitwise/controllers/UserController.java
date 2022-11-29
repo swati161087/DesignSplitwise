@@ -18,4 +18,7 @@ public class UserController {
     public User updateProfile(UpdateProfileDto updateProfileDto){
         return this.userService.updateProfile(updateProfileDto.getName(), updateProfileDto.getPassword(), updateProfileDto.getId());
     }
+    public String login(Long userId,String password){
+        return this.userService.login(userId, password);
+    }
 }
